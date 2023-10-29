@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Management</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Website Project Task Management</h1>
+    <div id="task-form">
+        <input type="text" id="task-name" placeholder="Task Name">
+        <select id="task-category">
+            <option value="Web Design">Web Design</option>
+            <option value="Content Creation">Content Creation</option>
+            <option value="Testing">Testing</option>
+        </select>
+        <input type="date" id="task-deadline">
+        <select id="task-priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+        <select id="sort-by">
+            <option value="default">Sort by</option>
+            <option value="priority">Priority</option>
+        </select>
+        <select id="filter-by">
+            <option value="all">Filter by Category</option>
+            <option value="Web Design">Web Design</option>
+            <option value="Content Creation">Content Creation</option>
+            <option value="Testing">Testing</option>
+        </select>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Category</th>
+                <th>Deadline</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="task-list">
+            <!-- Tasks will be added dynamically here -->
+        </tbody>
+    </table>
+    <div id="progress-text">Completed: 0 / Total: 0</div>
+    <script src="script.js"></script>
+</body>
+</html>
